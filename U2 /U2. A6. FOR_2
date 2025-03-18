@@ -1,0 +1,99 @@
+Una zapatera necesita registrar los datos de sus vendedores y los datos de las ventas individuales para calcular algunos estándares de calidad a fin de mejorar la productividad y otorgar bonos, así como "cortar cabezas". 
+
+El sistema debe solicitar el a cuántos vendedores se va a registrar su información y de cada vendedor debe solicitar cuántas ventas realizó y de cuánto fue el valor de cada una. 
+
+Después de terminar el registro de las ventas, debe mostrar el total de las ventas de ese vendedor, el número de ventas que hizo y su venta más alta. Si la venta más alta es menor a $100 o el total es menor de $1,500, debe mostrar un mensaje de que pase a Recursos Humanos. 
+
+El reporte final debe entregar un reporte de cuántos vendedores se registraron en el sistema y cuánto fue el total de las ventas globales de la empresa . Si el reporte global es mayor a $20,000 deberá mostrar un mensaje de que se alcanzó la meta , de lo contrario mostrará un mensaje que habrá que convocar una reunión . 
+
+
+Proceso Zapateria
+	Definir nv, Sv, v, Vg, Va, Sv1, Vm como numerico
+	Definir i , a Como Entero
+	Definir msj Como Caracter
+	Vg = 0
+	Va = 0
+	Escribir "Introducir el numero de vendedores a registrarse: "
+	Leer nv
+	Para i = 1 Hasta nv Hacer
+		Escribir "Vendendedor " i " Introduzca su numero de ventas: "
+		Leer Nv
+		Sv = 0
+		Para a = 1 Hasta Nv Hacer
+			Escribir "Vendedor " i " Introduzca El valor de su venta " a ":" 
+			Leer v
+			Sv1 = Sv + v
+			Sv = Sv + v
+			Va = Sv1 - va
+			Vg = Sv1 + Vg
+		FinPara
+		si v > Va Entonces
+			Vm = v
+			si Vm < 100 o Sv < 1500 Entonces
+				Mostrar "Debe presentarse a recursos humano"
+				
+			FinSi
+		SiNo
+			Vm = Va
+			si Vm < 100 o Sv < 1500 Entonces
+				Mostrar "Debe presentarse a recursos humano"
+				
+			FinSi
+		FinSi
+		Mostrar "Resumen de ventas del vendedor " i
+		Mostrar ""
+		Mostrar "Numero de ventas es de: " Nv
+		Mostrar ""
+		Mostrar "Su venta mayor es: " Vm
+		Mostrar ""
+		Mostrar "Sus ventas totales es de: " Sv1
+	FinPara
+	si Vg < 20000 Entonces
+		msj = "Tendremos que convocar una reunion."
+	SiNo
+		msj = "Se alcanzo la meta."
+	FinSi
+	Mostrar "El numero de vendedores resgistrados es de: " (i- 1) " Vendedores."
+	Mostrar "El total de las ventas globales es de: " Vg	
+	Mostrar msj
+FinProceso
+
+
+*** Ejecución Iniciada. ***
+Introducir el numero de vendedores a registrarse:
+> 2
+Vendendedor 1 Introduzca su numero de ventas:
+> 2
+Vendedor 1 Introduzca El valor de su venta 1:
+> 100
+Vendedor 1 Introduzca El valor de su venta 2:
+> 100000
+Resumen de ventas del vendedor 1
+
+Numero de ventas es de: 2
+
+Su venta mayor es: 100000
+
+Sus ventas totales es de: 100100
+Vendendedor 2 Introduzca su numero de ventas:
+> 2
+Vendedor 2 Introduzca El valor de su venta 1:
+> 12
+Vendedor 2 Introduzca El valor de su venta 2:
+> 12
+Debe presentarse a recursos humano
+Resumen de ventas del vendedor 2
+
+Numero de ventas es de: 2
+
+Su venta mayor es: 100012
+
+Sus ventas totales es de: 24
+El numero de vendedores resgistrados es de: 2 Vendedores.
+El total de las ventas globales es de: 100236
+Se alcanzo la meta.
+*** Ejecución Finalizada. ***
+
+
+
+
