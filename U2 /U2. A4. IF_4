@@ -1,0 +1,289 @@
+El programador sigue teniendo complicaciones para ajustar su código cuando ingresan valores, pero necesita ayuda, ahora su jefe, que no conoce mucho de programación, quiere un programa para calcular los rendimientos de 4 vendedores y ver la diferencia entre estos.
+
+El programa debe recibir los 4 valores de los vendedores, que se calcula en ventas por mes, después, el programa debe ordenarlos de menor a mayor, siendo 4 el mayor y 1 el menor, una vez hecho esto debe hacer las siguientes operaciones.
+
+Mostrar los números ordenados
+El resultado del 4 menos el 1
+El resultado del 2 menos el 1
+El resultado del 4 menos el 3
+El resultado del 3 menos el 2
+La suma de todas las ventas y el promedio general
+
+
+Algoritmo Vendedores
+	Mostrar "Introduzca sus ventas del mes"
+	Leer v1
+	
+	Mostrar "Introduzca sus ventas del mes"
+	Leer v2
+	
+	Mostrar "Introduzca sus ventas del mes"
+	Leer v3
+	
+	Mostrar "Introduzca sus ventas del mes"
+	Leer v4
+	
+	si v1 > v2 y v1 > v3 y v1 > v4 entonces
+		p1 =  "v1 es mayor"
+		po1 = v1
+		si v2 > v3 y v2 > v4 Entonces
+			p2 = "v2 es la segunda mayor"
+			po2 = v2
+			si v3 > v4 Entonces
+				p3 = "v3 es la tercera mayor"
+				po3 = v3
+				p4 = "v4 es la menor"
+				po4 = v4
+			sino
+				p3 = "v4 es la tercera mayor"
+				po3 = v4
+				p4 = "v3 es la menor"
+				po4 = v3
+			FinSi
+		SiNo
+			si v3 > v2 y v3 > v4 Entonces
+				p2 = "v3 es la segunda mayor"
+				po2 = v3
+				si v2 > v4 Entonces
+					p3 = "v2 es la tercera mayor"
+					po3 = v2
+					p4 = "v4 es la menor" 
+					po4 = v4
+				sino
+					p3 = "v4 es la tercera mayor"
+					po3 = v4
+					p4 = "v2 es la menor"
+					po4 = v2
+				FinSi
+			SiNo
+				si v4 > v3 y v4 > v2 Entonces
+					p2 = "v4 es la segunda mayor"
+					po2 = v4
+					si v3 > v2 Entonces
+						p3 = "v3 es la tercera mayor"
+						po3 = v3
+						p4 = "v2 es la menor"
+						po4 = v2
+					sino
+						p3 = "v2 es la tercera mayor"
+						po4 = v4
+						p4 = "v3 es la menor"
+						po4 = v3
+					FinSi
+				SiNo
+					
+				FinSi
+			FinSi
+		FinSi
+	SiNo
+		si v2 > v1 y v2 > v3 y v2 > v4 Entonces
+			p1 = "v2 es mayor"
+			po1 = v2
+			si v1 > v3 y v1 > v4 Entonces
+				p2 = "v1 es la segunda mayor"
+				po2 = v1
+				si v3 > v4 Entonces
+					p3 = "v3 es la tercera mayor"
+					po3 = v3
+					p4 = "v4 es la menor" 
+					po4 = v4
+				sino
+					p3 = "v4 es la tercera mayor"
+					po3 = v3
+					p4 = "v3 es la menor"
+					po4 = v3
+				FinSi
+			SiNo
+				si v3 > v1 y v3 > v4 Entonces
+					p2 = "v3 es la segunda mayor"
+					po2 = v3
+					si v1 > v4 Entonces
+						p3 = "v1 es la tercera mayor"
+						po3 = v1
+						p4 = "v4 es la menor"
+						po4 = v4
+					sino
+						p3 = "v4 es la tercera mayor"
+						po3 = v4
+						p4 = "v1 es la menor"
+						po4 = v1
+					FinSi
+				SiNo
+					si v4 > v3 y v4 > v1 Entonces
+						p2 = "v4 es la segunda mayor"
+						po2 = v4
+						si v3 > v2 Entonces
+							p3 = "v3 es la tercera mayor"
+							po3 = v3
+							p4 = "v1 es la menor" 
+							po4 = v1
+						sino
+							p3 = "v1 es la tercera mayor"
+							po3 = v1
+							p4 = "v3 es la menor"
+							po4 = v3
+						FinSi
+					SiNo
+						
+					FinSi
+				FinSi
+			FinSi
+		SiNo
+			si v3 > v1 y v3 > v2 y v3 > v4 Entonces
+				p1 = "v3 es mayor"
+				po1 = v3
+				si v2 > v1 y v2 > v4 Entonces
+					p2 = "v2 es la segunda mayor"
+					po2 = v2
+					si v1 > v4 Entonces
+						p3 = "v1 es la tercera mayor"
+						po3 = v1
+						p4 = "v4 es la menor" 
+						po4 = v4
+					sino
+						p3 = "v4 es la tercera mayor"
+						po3 = v4
+						p4 = "v1 es la menor"
+						po4 = v1
+					FinSi
+				SiNo
+					si v1 > v2 y v1 > v4 Entonces
+						p2 = "v1 es la segunda mayor"
+						po2 = v1
+						si v2 > v4 Entonces
+							p3 = "v2 es la tercera mayor"
+							po3 = v2
+							p4 = "v4 es la menor" 
+							po4 = v4
+						sino
+							p3 = "v4 es la tercera mayor"
+							po3 = v4
+							p4 = "v2 es la menor"
+							po4 = v2
+						FinSi
+					SiNo
+						si v4 > v1 y v4 > v2 Entonces
+							p2 = "v4 es la segunda mayor"
+							po2 = v4
+							si v1 > v2 Entonces
+								p3 = "v1 es la tercera mayor"
+								po3 = v1
+								p4 = "v2 es la menor" 
+								po4 = v2
+							sino
+								p3 = "v2 es la tercera mayor"
+								po3 = v2
+								p4 = "v1 es la menor"
+								po4 = v1
+							FinSi
+						SiNo
+							
+						FinSi
+					FinSi
+				FinSi
+			SiNo
+				si v4 > v1 y v4 > v2 y v4 > v3 Entonces
+					p1 = "v4 es mayor"
+					po1 = v4
+					si v2 > v3 y v2 > v1 Entonces
+						p2 = "v2 es la segunda mayor"
+						po2 = v2
+						si v3 > v1 Entonces
+							p3 = "v3 es la tercera mayor"
+							po3 = v3
+							p4 = "v1 es la menor" 
+							po4 = v1
+						sino
+							p3 = "v1 es la tercera mayor"
+							po3 = v1
+							p4 = "v3 es la menor"
+							po4 = v3
+						FinSi
+					SiNo
+						si v3 > v2 y v3 > v1 Entonces
+							p2 = "v3 es la segunda mayor"
+							po2 = v3
+							si v2 > v1 Entonces
+								p3 = "v2 es la tercera mayor"
+								po3 = v2
+								p4 = "v1 es la menor" 
+								po4 = v1
+							sino
+								p3 = "v1 es la tercera mayor"
+								po3 = v1
+								p4 = "v2 es la menor"
+								po4 = v2
+							FinSi
+						SiNo
+							si v1 > v3 y v1 > v2 Entonces
+								p2 = "v1 es la segunda mayor"
+								po2 = v1
+								si v3 > v2 Entonces
+									p3 = "v3 es la tercera mayor"
+									po3 = v3
+									p4 = "v2 es la menor" 
+									po4 = v2
+								sino
+									p3 = "v2 es la tercera mayor"
+									po3 = v2
+									p4 = "v3 es la menor"
+									po4 = v3
+								FinSi
+							SiNo
+							FinSi
+						FinSi
+					FinSi
+				FinSi
+			FinSi
+		FinSi
+	FinSi
+	
+	op1 = po1 - po4
+	op2 = po3 - po4
+	op3 = po1 - po2
+	op4 = p02 - po3
+	suma = po1 + po2 + po3 + po4
+	promedio = suma/4
+	
+	Mostrar p4
+	Mostrar p3
+	Mostrar p2
+	Mostrar p1
+	
+	Mostrar "La resta del mayor menos el menor es = " op1
+	Mostrar "La resta del tercero menos el menor es = " op2
+	Mostrar "La resta del mayor menos el segundo es = " op3
+	Mostrar "La resta del segundo menos el tercero es = " op4
+	Mostrar "La suma de todas las ventas es de: = " suma
+	Mostrar "El promedio de las ventas es de = " promedio
+
+	
+ FinAlgoritmo
+
+
+
+
+*** Ejecución Iniciada. ***
+Introduzca sus ventas del mes
+> 23
+Introduzca sus ventas del mes
+> 32
+Introduzca sus ventas del mes
+> 32
+Introduzca sus ventas del mes
+> 122
+
+
+
+v4 es mayor
+La resta del mayor menos el menor es = 122
+La resta del tercero menos el menor es = 0
+La resta del mayor menos el segundo es = 122
+La resta del segundo menos el tercero es = 0
+La suma de todas las ventas es de: = 122
+El promedio de las ventas es de = 30.5
+*** Ejecución Finalizada. ***
+
+
+
+
