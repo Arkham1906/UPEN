@@ -1,0 +1,18 @@
+Algoritmo Fecha_navidad
+	ESCRIBIR "Ingrese el radio"
+	Leer r
+	Escribir "Ingrese la Hipotenusa"
+	Leer h
+	
+	//Proceso 
+	a= raiz( h*h - r*r)
+	b= (2*r)
+	area_triangulo= b*a/2
+	area_circulo_g = 3.1416*r*r/2
+	area_total= area_circulo_g + area_triangulo
+	area_circulo_c= 3.1416*((r/2)^2)
+	otra_area= area_circulo_g/4 - area_circulo_c/2
+	area_sombreada= (area_triangulo) + ((area_circulo_g/2)-(area_circulo_c/2))
+	
+	Mostrar "El area sombreada es: " area_sombreada 
+FinAlgoritmo
