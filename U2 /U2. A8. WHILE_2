@@ -1,0 +1,106 @@
+La abarrotera "Kamarena" necesita trabajar en un sistema que le ayude a registrar de manera fácil y rápida todos sus pedidos, hubo una explosión en el mercado al otro lado de la ciudad y ellos han quedado como el único lugar disponible para comprar, esa idea de poner una bomba ha salido terriblemente bien (no hubo ningún herido).
+
+Mientras el dueño sigue luchando entre entregarse a las autoridades por lo sucedido y pedir perdón a las familias involucradas, ha pedido a su asesor externo, el "Teclas" que le ayude con un sistema.
+
+Para ingresar al sistema debe pedir una contraseña (Mientras), que debe ser una fecha de nacimiento en formato YYYY-MM-DD, una vez en el sistema, debe preguntar si (Si) quiere hacer registros de zanahorias o de tomates.
+
+Si elige zanahorias, deberá pedir que se ingresen cuántas cajas deberá ingresar (Para), como cada caja tiene un valor diferente, habrá que ingresarlo manualmente una por una.
+
+Si elige tomates, deberá ingresar cuantas cajas se necesiten y cuando escriba el número 100001 deberá terminar de registrar (Mientras).
+
+En ambos casos, deberá qué opción se eligió y mostrar cuántas cajas se añadieron, cuánto fue el total del peso y cuánto fue el costo total de esa venta, las zanahorias cuestan $15.84 el kilo y los tomates cuestan $11.34 el kilo, si (Si) la venta supera los $10,000, se le hará un descuento automático del 7.5% del valor total.
+
+Finalmente, deberá preguntar si (Si) el cliente necesita o no envío, si requiere envío deberá añadir $150 más a su pedido, de lo contrario, mostrará el precio anterior.
+
+
+
+Proceso Kamarena
+	Escribir "Introducir contraseña"
+	Leer contraseña
+	Mientras  contraseña == "2006-09-19" Hacer
+		Escribir "Desea ingresar tomates o zanahorias (1 para zanahorias) (2 para tomates): "
+		Leer opc
+		si opc == 1
+			eleccion = "Elegiste tomates"
+			Escribir "Cuantas cajas desea ingresar?: "
+			Leer cajas 
+			para i = 0  Hasta cajas
+				val_tot = val + val_tot
+				Escribir "Introduce valor de la caja " i " : "
+				Leer val
+				peso = val_tot*cajas
+				final = peso * 11.34
+			FinPara
+		FinSi
+		si opc == 2 Entonces
+			eleccion = "elegiste zanahorias"
+			caj = 0
+			Mientras caj <> 100001 Hacer
+				valor_tot = cajas + valor_tot
+				Mostrar "Cuantas cajas vas a agregar?: "
+				leer cajas
+				peso = cajas * 10
+				final = peso * 15.84
+			FinMientras
+		FinSi
+		si opc <> 1 Y opc <> 2 Entonces
+			Mostrar "Tas pollo carnal, calale con uno o dos"
+		FinSi
+		contraseña = "2"
+	FinMientras
+	si final > 10000 Entonces
+		final = final * .925
+	FinSi
+	Mostrar eleccion
+	Mostrar "El total de cajas añadidas fue de: " cajas
+	Mostrar "El peso total fue de: " peso "kg"
+	Mostrar "El precio final es de: " final "$"
+	Escribir "Desea que le enviemos su pedido? "
+	Leer llevar
+	si llevar == "si" Entonces
+		final = final + 150
+		Mostrar "Su pedido final, con envio seria de " final
+	FinSi
+FinProceso
+
+
+*** Ejecución Iniciada. ***
+Introducir contraseña
+> 2006-09-19
+Desea ingresar tomates o zanahorias (1 para zanahorias) (2 para tomates):
+> 1
+Elegiste tomates
+Cuantas cajas desea ingresar?:
+> 12
+Introduce valor de la caja 1 :
+> 12
+Introduce valor de la caja 2 :
+> 12
+Introduce valor de la caja 3 :
+> 21
+Introduce valor de la caja 4 :
+> 21
+Introduce valor de la caja 5 :
+> 12
+Introduce valor de la caja 6 :
+> 12
+Introduce valor de la caja 7 :
+> 12
+Introduce valor de la caja 8 :
+> 12
+Introduce valor de la caja 9 :
+> 12
+Introduce valor de la caja 10 :
+> 12
+Introduce valor de la caja 11 :
+> 21
+Introduce valor de la caja 12 :
+> 12
+Elegiste tomates
+El total de cajas añadidas fue de: 12
+El peso total fue de: 1908kg
+El precio final es de: 20013.966$
+Desea que le enviemos su pedido?
+> si
+Su pedido final, con envio seria de 20163.966
+*** Ejecución Finalizada. ***
