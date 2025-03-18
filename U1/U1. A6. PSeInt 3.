@@ -1,0 +1,54 @@
+Realiza un pseudocódigo que calcule el promedio de un alumno, el usuario ingresará su nombre y edad, después deberá ingresar sus 3 instrumentos, examen que vale el 30%, tareas que vale el 20% y trabajos en clase que vale el 50%, deberá calcular el promedio final.
+Usando operadores, deberá validar si el alumno aprobó con una calificación igual o mayor a 6.
+La respuesta debe mostrar el nombre del alumno, su edad, y el valor de cada instrumento, su promedio final, y mostrar si el alumno aprobó con un Verdadero o Falso.
+
+
+Algoritmo 	act_3
+	escribir "Escriba su nombre:"
+	leer nombre
+	
+	escribir "Escriba su edad:"
+	leer edad
+	
+	escribir "Escriba su calificacion de examen:"
+	leer cal1
+	
+	escribir "Escriba su calificacion de Tareas:"
+	leer cal2
+	
+	escribir "Escriba su calificacion de Trabajos en clase:"
+	leer cal3
+	
+	
+	promedio_final <- (cal1 * 0.30) + (cal2 * 0.20) + (cal3 * 0.50)
+	
+	aprobado <- (promedio_final >= 6)
+	
+	escribir "Nombre del alumno: ", nombre
+	escribir "Edad del alumno: ", edad
+	escribir "Calificación Examen: ", cal1
+	escribir "Calificación Tareas: ", cal2
+	escribir "Calificación Trabajos en clase: ", cal3
+	escribir "Promedio final: ", promedio_final
+	escribir "¿Aprobó?: ", aprobado
+FinAlgoritmo
+
+*** Ejecución Iniciada. ***
+Escriba su nombre:
+> Andrey
+Escriba su edad:
+> 18
+Escriba su calificacion de examen:
+> 10
+Escriba su calificacion de Tareas:
+> 10
+Escriba su calificacion de Trabajos en clase:
+> 10
+Nombre del alumno: Andrey
+Edad del alumno: 18
+Calificación Examen: 10
+Calificación Tareas: 10
+Calificación Trabajos en clase: 10
+Promedio final: 10
+¿Aprobó?: VERDADERO
+*** Ejecución Finalizada. ***
