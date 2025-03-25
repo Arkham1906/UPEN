@@ -1,0 +1,55 @@
+SubAlgoritmo esfera()
+	Mostrar "Eligio esfera"
+	Escribir "Cual es el radio?"
+	Leer r
+	volumen = 4/3 * pi * r^3
+	Mostrar "El volumen es: " volumen
+FinSubAlgoritmo
+SubAlgoritmo cilindro() 
+	Mostrar "Eligio cilindro"
+	Escribir "Cual es el radio?"
+	Leer r
+	Escribir "Cual es la altura?"
+	Leer h
+	volumen = pi * r*r * h
+	Mostrar "El volumen es: " volumen
+FinSubAlgoritmo
+SubAlgoritmo cubo
+	Mostrar "Eligio cubo"
+	Escribir "Introducir lado"
+	Leer l
+	volumen = l*l*l
+	Mostrar "El volumen es: " volumen
+FinSubAlgoritmo
+SubAlgoritmo  validacion()
+	definir f como numerico
+	Escribir "Que figura desea calcular? (esfera = 1; cilindro = 2; cubo = 3)"
+	Leer f
+	si f > 3 O f < 0 Entonces
+		Mostrar "Vuelva a introducir un valor"
+		validacion()
+	FinSi
+	si f = 1 Entonces
+		esfera()
+	FinSi
+	si f = 2 Entonces
+		cilindro()
+	FinSi
+	si f = 3 Entonces
+		cubo()
+	FinSi
+	opc()
+FinSubAlgoritmo
+SubAlgoritmo opc
+	Escribir "Desea repetir el codigo? (si = 1; no = 2)"
+	Leer op
+	si op = "1" Entonces
+		validacion()
+	FinSi
+	si op = "2" Entonces
+		Mostrar "Adios"
+	FinSi
+FinSubAlgoritmo
+Algoritmo sin_titulo
+	validacion()
+FinAlgoritmo
