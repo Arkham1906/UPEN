@@ -1,6 +1,6 @@
 # Nombre de la Materia
 
-![Logo de la Universidad](./img/logoupen)
+![Logo de la Universidad](./img/logoupen.png)
 
 ## Información General
 - **Materia:** Fundamentos de programacion.  
