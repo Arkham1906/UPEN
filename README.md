@@ -17,7 +17,7 @@ La materia nos muestra los primeros conceptos de lo que es la programacion.
 ## Unidad 1
 **Descripción breve de la unidad:** En esta unidad nos enseño la logoca de porgramacion, desarrollar y entender problemas.  
 
-[Ir a Unidad 1](#unidad-1)
+[Ir a Unidad 1](.U1)
 
 ---
 
