@@ -24,14 +24,14 @@ La materia nos muestra los primeros conceptos de lo que es la programacion.
 ## Unidad 2
 **Descripción breve de la unidad:** Se nos enseño la estructura basica de un codigo mediante los pseudocodigos como PseINT  
 
-[Ir a Unidad 2](#unidad-2)
+[Ir a Unidad 2](./U2)
 
 ---
 
 ## Unidad 3
 **Descripción breve de la unidad:** Se nos mostro la metodologia de como podemos usar los controladores de versiones como GitHub.  
 
-[Ir a Unidad 3](#unidad-3)
+[Ir a Unidad 3](./U3)
 
 ---
 
